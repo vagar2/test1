@@ -9,7 +9,8 @@
         <ListBox x:Name="lbMain" HorizontalAlignment="Left" Height="273" Margin="146,36,0,0" VerticalAlignment="Top" Width="361"/>
         <Button x:Name="btCalc" Content="Рассчет" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="120" Click="btCalc_Click" RenderTransformOrigin="0.633,0.65"/>
         <Button x:Name="btCalc2" Content="Рассчет 2" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="120" Click="btCalc2_Click"/>
-        <Button x:Name="btSave" Content="Сохранить" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Width="120" Click="btSave_Click"/>
+        <Button x:Name="btSave" Content="Сохранить" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" Width="120" Click="btSave_Click"/>
         <Button x:Name="btExit" Content="Выход" HorizontalAlignment="Left" Margin="10,289,0,0" VerticalAlignment="Top" Width="120" Click="btExit_Click"/>
+        <Button x:Name="btZad1" Content="Задание 1" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Width="120" Click="btZad1_Click" RenderTransformOrigin="0.633,0.65"/>
     </Grid>
 </Window>

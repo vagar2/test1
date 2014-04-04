@@ -88,5 +88,11 @@ namespace WpfApplication1
         {
             this.Close();
         }
+
+        private void btZad1_Click(object sender, RoutedEventArgs e)
+        {
+            //1. Дан массив из n чисел. Сколько элементов массива больше своих «соседей»,­ 
+            //т.е. предыдущег­о и последующе­го. Первый и последний элементы не рассматрив­ать.
+        }
     }
 }
