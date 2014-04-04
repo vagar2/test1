@@ -123,5 +123,35 @@ namespace WpfApplication1
             }
             lbMain.Items.Add("Ответ: "+resultoftask);
         }
+
+        private void btZad2_Click(object sender, RoutedEventArgs e)
+        {
+            //2. Для массива из n чисел найти номер первого элемента, большего 25.
+            ArrayList myAL = new ArrayList();
+            int index;
+            int itemCount = Convert.ToInt32(tbN.Text);
+            Random rnd1 = new Random();
+            int number;
+            lbMain.Items.Clear();
+            lbMain.Items.Add("Исходный массив");
+            for (index = 1; index <= itemCount; index++)
+            {
+                number = -100 + rnd1.Next(200);
+                myAL.Add(number);
+                lbMain.Items.Add(number);
+            }
+            lbMain.Items.Add("2. Для массива из n чисел найти номер первого элемента, большего 25.");
+
+            for (index = 0; index <= itemCount - 1; index++)
+            {
+                int currentVal = Convert.ToInt32(myAL[index]);
+                if (currentVal > 25)
+                {
+                    lbMain.Items.Add("Число:" + currentVal);
+                    lbMain.Items.Add("Ответ: " + (index+1));
+                    break;
+                }
+            }
+        }
     }
 }
