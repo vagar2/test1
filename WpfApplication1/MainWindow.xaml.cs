@@ -96,32 +96,40 @@ namespace WpfApplication1
             ArrayList myAL = new ArrayList();
             int index;
             int itemCount = Convert.ToInt32(tbN.Text);
-            Random rnd1 = new Random();
-            int number;
-            lbMain.Items.Clear();
-            lbMain.Items.Add("Исходный массив");
-            for (index = 1; index <= itemCount; index++)
+            if (itemCount >= 3)
             {
-                number = -100 + rnd1.Next(200);
-                myAL.Add(number);
-                lbMain.Items.Add(number);
-            }
-            lbMain.Items.Add("Сколько элементов массива больше своих «соседей»,");
-            lbMain.Items.Add("­т.е. предыдущег­о и последующе­го.");
-            lbMain.Items.Add("­Первый и последний элементы не рассматрив­ать.");
-            int resultoftask = 0;
-            for (index = 1; index <= itemCount-2; index++)
-            {
-                int prevousVal = Convert.ToInt32(myAL[index - 1]);
-                int currentVal = Convert.ToInt32(myAL[index]);
-                int nextVal = Convert.ToInt32(myAL[index + 1]);
-                if ((currentVal > prevousVal) && (currentVal>nextVal))
+                Random rnd1 = new Random();
+                int number;
+                lbMain.Items.Clear();
+                lbMain.Items.Add("Исходный массив");
+                for (index = 1; index <= itemCount; index++)
                 {
-                    resultoftask++;
-                    lbMain.Items.Add(resultoftask+":" + prevousVal+" "+currentVal+" "+nextVal);
+                    number = -100 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
                 }
+                lbMain.Items.Add("Сколько элементов массива больше своих «соседей»,");
+                lbMain.Items.Add("­т.е. предыдущег­о и последующе­го.");
+                lbMain.Items.Add("­Первый и последний элементы не рассматрив­ать.");
+                int resultoftask = 0;
+                for (index = 1; index <= itemCount - 2; index++)
+                {
+                    int prevousVal = Convert.ToInt32(myAL[index - 1]);
+                    int currentVal = Convert.ToInt32(myAL[index]);
+                    int nextVal = Convert.ToInt32(myAL[index + 1]);
+                    if ((currentVal > prevousVal) && (currentVal > nextVal))
+                    {
+                        resultoftask++;
+                        lbMain.Items.Add(resultoftask + ":" + prevousVal + " " + currentVal + " " + nextVal);
+                    }
+                }
+                lbMain.Items.Add("Ответ: " + resultoftask);
             }
-            lbMain.Items.Add("Ответ: "+resultoftask);
+            else
+            {
+                MessageBox.Show("Колличество элементов в массиве должно быть не меньше 3");
+            }
+
         }
 
         private void btZad2_Click(object sender, RoutedEventArgs e)
