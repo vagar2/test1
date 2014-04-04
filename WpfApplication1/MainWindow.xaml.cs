@@ -171,10 +171,39 @@ namespace WpfApplication1
         private void btZad3_Click(object sender, RoutedEventArgs e)
         {
             //3. В массиве из n чисел найти сумму элементов больших, чем   второй элемент этого массива.
-            int itemCount = Convert.ToInt32(tbN.Text);
+            int itemCount = Convert.ToInt32(tbN.Text); 
+            ArrayList myAL = new ArrayList();
+            int index;
             if (itemCount >= 2)
             {
-                
+                Random rnd1 = new Random();
+                int number;
+                lbMain.Items.Clear();
+                lbMain.Items.Add("Исходный массив");
+                for (index = 1; index <= itemCount; index++)
+                {
+                    number = -100 + rnd1.Next(200);
+                    myAL.Add(number);
+                    lbMain.Items.Add(number);
+                }
+                lbMain.Items.Add("3. В массиве из n чисел найти сумму элементов больших, чем второй элемент этого массива.");
+                int secondVal = Convert.ToInt32(myAL[1]);
+                int findResult = 0;
+                for (index = 0; index <= itemCount - 1; index++)
+                {
+                    int currentVal = Convert.ToInt32(myAL[index]);
+                    if (currentVal > secondVal)
+                    {
+                        lbMain.Items.Add("Число:" + currentVal);
+                        findResult += currentVal;
+                    }
+                }
+                lbMain.Items.Add("Ответ: " + findResult);
+
+            }
+            else
+            {
+                MessageBox.Show("Колличество элементов в массиве должно быть не меньше 2");
             }
         }
     }
