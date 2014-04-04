@@ -93,6 +93,35 @@ namespace WpfApplication1
         {
             //1. Дан массив из n чисел. Сколько элементов массива больше своих «соседей»,­ 
             //т.е. предыдущег­о и последующе­го. Первый и последний элементы не рассматрив­ать.
+            ArrayList myAL = new ArrayList();
+            int index;
+            int itemCount = Convert.ToInt32(tbN.Text);
+            Random rnd1 = new Random();
+            int number;
+            lbMain.Items.Clear();
+            lbMain.Items.Add("Исходный массив");
+            for (index = 1; index <= itemCount; index++)
+            {
+                number = -100 + rnd1.Next(200);
+                myAL.Add(number);
+                lbMain.Items.Add(number);
+            }
+            lbMain.Items.Add("Сколько элементов массива больше своих «соседей»,");
+            lbMain.Items.Add("­т.е. предыдущег­о и последующе­го.");
+            lbMain.Items.Add("­Первый и последний элементы не рассматрив­ать.");
+            int resultoftask = 0;
+            for (index = 1; index <= itemCount-2; index++)
+            {
+                int prevousVal = Convert.ToInt32(myAL[index - 1]);
+                int currentVal = Convert.ToInt32(myAL[index]);
+                int nextVal = Convert.ToInt32(myAL[index + 1]);
+                if ((currentVal > prevousVal) && (currentVal>nextVal))
+                {
+                    resultoftask++;
+                    lbMain.Items.Add(resultoftask+":" + prevousVal+" "+currentVal+" "+nextVal);
+                }
+            }
+            lbMain.Items.Add("Ответ: "+resultoftask);
         }
     }
 }
