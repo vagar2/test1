@@ -13,5 +13,6 @@
         <Button x:Name="btExit" Content="Выход" HorizontalAlignment="Left" Margin="10,609,0,0" VerticalAlignment="Top" Width="120" Click="btExit_Click"/>
         <Button x:Name="btZad1" Content="Задание 1" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Width="120" Click="btZad1_Click" RenderTransformOrigin="0.633,0.65"/>
         <Button x:Name="btZad2" Content="Задание 2" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Width="120" Click="btZad2_Click" RenderTransformOrigin="0.633,0.65"/>
+        <Button x:Name="btZad3" Content="Задание 3" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Width="120" Click="btZad3_Click" RenderTransformOrigin="0.633,0.65"/>
     </Grid>
 </Window>

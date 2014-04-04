@@ -142,6 +142,7 @@ namespace WpfApplication1
             }
             lbMain.Items.Add("2. Для массива из n чисел найти номер первого элемента, большего 25.");
 
+            bool findResult = false;
             for (index = 0; index <= itemCount - 1; index++)
             {
                 int currentVal = Convert.ToInt32(myAL[index]);
@@ -149,8 +150,23 @@ namespace WpfApplication1
                 {
                     lbMain.Items.Add("Число:" + currentVal);
                     lbMain.Items.Add("Ответ: " + (index+1));
+                    findResult = true;
                     break;
                 }
+            }
+            if (findResult == false)
+            {
+                lbMain.Items.Add("Нет таких чисел в массиве");
+            }
+        }
+
+        private void btZad3_Click(object sender, RoutedEventArgs e)
+        {
+            //3. В массиве из n чисел найти сумму элементов больших, чем   второй элемент этого массива.
+            int itemCount = Convert.ToInt32(tbN.Text);
+            if (itemCount >= 2)
+            {
+                
             }
         }
     }
